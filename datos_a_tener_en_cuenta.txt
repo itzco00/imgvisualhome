@@ -1,0 +1,24 @@
+para acceder de manera exitosa al directorio local, tener en cuenta lo siguiente:
+-cambiar el valor de la variable "$config['log_threshold'] = 0;" por "$config['log_threshold'] = 1;"
+en la seccion de configuracion,para mostrar los errores por los cuales no esta funcionando
+-dentro de la carpeta logs en nuestro archivo "aplication", buscar el error en el archivo mas reciente,
+puede mandar un error de tipo "ldap_connect()".
+-ir a xampp o a la configuracion de apache (httpd.conf) y buscar ldap.
+-descomentar la linea "LoadModule authnz_ldap_module modules/mod_authnz_ldap.so"
+-descomentar la linea "LoadModule ldap_module modules/mod_ldap.so"
+-ir a xampp o a la configuracion de apache (php.ini) y buscar ldap.
+-descomentar la linea "extension=ldap"
+-reiniciar el apache, php o mysql, apagar y volver a prender el apache y php o mysql
+-ahora ya se puede acceder al directorio local
+
+Si al insertar los productos manda un error con algun mensaje parecido a este "max_input_vars" debe ir a la
+configuracion de php.ini en apache, buscr y descomentar la linea "max_input_vars" quitando ";" y asignar por ejemplo:
+"max_input_vars = 100000" para que acepte la insersion de muchos caracteres
+
+
+al arrancar un proyecto de codeigniter ir a index.php y cambiar:
+define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
+por:
+define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'production');
+de esta manera evitaras que te salgan infinidad de errores que la vista index.php que trae por defecto
+al iniciar tu proyecto de codeigniter 3

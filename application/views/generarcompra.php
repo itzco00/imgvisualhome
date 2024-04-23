@@ -6274,7 +6274,7 @@
             var newcc31 = document.getElementById('newcc31mhjmpi' + row_idmhjmpi2).value;
             var newcc33 = document.getElementById('newcc33mhjmpi' + row_idmhjmpi2).value;
             var newcc34 = document.getElementById('newcc34mhjmpi' + row_idmhjmpi2).value;
-            var newcc31r = document.getElementById('newcc31rdcmpe' + row_iddcmpe2).value;
+            var newcc31r = document.getElementById('newcc31rmhjmpi' + row_iddcmpe2).value;
             var newcc33r = document.getElementById('newcc33rdcmpe' + row_iddcmpe2).value;
             var newcc34r = document.getElementById('newcc34rdcmpe' + row_iddcmpe2).value;
             var activof = document.getElementById('newactivofdcmpe' + row_iddcmpe2).value;
